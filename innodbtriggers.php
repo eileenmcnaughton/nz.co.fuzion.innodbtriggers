@@ -21,46 +21,12 @@ function innodbtriggers_civicrm_install() {
 }
 
 /**
- * Implements hook_civicrm_uninstall().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_uninstall
- */
-function innodbtriggers_civicrm_uninstall() {
-  _innodbtriggers_civix_civicrm_uninstall();
-}
-
-/**
  * Implements hook_civicrm_enable().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
 function innodbtriggers_civicrm_enable() {
   _innodbtriggers_civix_civicrm_enable();
-}
-
-/**
- * Implements hook_civicrm_disable().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_disable
- */
-function innodbtriggers_civicrm_disable() {
-  _innodbtriggers_civix_civicrm_disable();
-}
-
-/**
- * Implements hook_civicrm_upgrade().
- *
- * @param $op string, the type of operation being performed; 'check' or 'enqueue'
- * @param $queue CRM_Queue_Queue, (for 'enqueue') the modifiable list of pending up upgrade tasks
- *
- * @return mixed
- *   Based on op. for 'check', returns array(boolean) (TRUE if upgrades are pending)
- *                for 'enqueue', returns void
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_upgrade
- */
-function innodbtriggers_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _innodbtriggers_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -97,22 +63,4 @@ function innodbtriggers_civicrm_alterLogTables(&$logTableSpec) {
     }
     $logTableSpec[$tableName]['indexes'] = array_merge($indexArray, $contactIndexes);
   }
-}
-
-/**
- * Implements hook_civicrm_postInstall().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_postInstall
- */
-function innodbtriggers_civicrm_postInstall() {
-  _innodbtriggers_civix_civicrm_postInstall();
-}
-
-/**
- * Implements hook_civicrm_entityTypes().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
- */
-function innodbtriggers_civicrm_entityTypes(&$entityTypes) {
-  _innodbtriggers_civix_civicrm_entityTypes($entityTypes);
 }
