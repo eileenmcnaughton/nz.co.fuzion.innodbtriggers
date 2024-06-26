@@ -21,6 +21,9 @@
   <comments>Requires logging pages currently targetted at 4.7.5. If log tables already exist run civicrm-api setting.updatelogtables</comments>
   <civix>
     <namespace>CRM/Innodbtriggers</namespace>
-    <format>22.10.0</format>
+    <format>23.02.1</format>
   </civix>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
 </extension>
